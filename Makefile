@@ -1,3 +1,5 @@
+SOURCES = raspimonitor tests
+
 install:
 	pip install -r requirements.txt
 
@@ -5,13 +7,13 @@ install-dev:
 	pip install -r requirements-dev.txt
 
 format:
-	echo "test"
+	ruff format $(SOURCES)
+	ruff check --fix $(SOURCES)
 
 lint:
-	echo "test"
+	ruff check $(SOURCES)
 
 unit:
-	echo "test"
 	pytest -svvv tests
 
 test: lint unit

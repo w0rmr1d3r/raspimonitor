@@ -1,16 +1,13 @@
 [build-system]
-# todo - check the latest version on this
-requires = ["setuptools>=67.0.0"]
+requires = ["setuptools>=69.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "raspimonitor"
-# Make sure this matches the description in GitHub, in the README.md and wherever applies
-description = "TODO"
+description = "Monitoring and alerting for your RaspberryPi "
 readme = "README.md"
-authors = [{ "name" = "w0rmr1d3r" }]
+authors = [{ name = "w0rmr1d3r" }]
 license = { text = "MIT" }
-# todo
 classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
@@ -19,27 +16,27 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
 ]
-# todo Make sure this matches the keywords in GitHub
 keywords = []
-# todo - dynamic
+
 version = "0.0.1"
 # Minumum supported version
 # If supporting newer versions, update ->  CI and classifiers
-# If minimum supported version changes, update -> CI, coverage, lint, release and classifiers.
+# If minimum supported version changes, update -> CI, release and classifiers.
 requires-python = ">=3.9"
 
-# Always try to be compatible with these versions and above
 dependencies = [
     "requests~=2.0"
 ]
 
 [project.optional-dependencies]
-# Always try to be compatible with these versions and above
-# todo - search for latest versions and update project and template accordingly
 dev = [
-    "pip-tools>=6.12.0", # todo - change for uv
-    "ruff>=0.0.270", # todo - check cloner for config on this
+    "pip-tools~=7.0",
+    "ruff==0.3.1",
 ]
 
 [project.urls]
@@ -52,3 +49,47 @@ dev = [
 
 [tool.setuptools]
 packages = ["raspimonitor"]
+
+
+[tool.ruff]
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".pyenv",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "build",
+    "dist",
+    "node_modules",
+    "site",
+    "site-packages",
+    "venv",
+]
+line-length = 120
+indent-width = 4
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "A", "PLC", "PLE", "PLW", "I"]
+ignore = ["A002", "E501"]
+
+# Allow fix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = false
+docstring-code-line-length = "dynamic"
