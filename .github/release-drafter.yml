@@ -1,0 +1,23 @@
+name-template: '$RESOLVED_VERSION'
+tag-template: '$RESOLVED_VERSION'
+categories:
+  - title: 'Dependencies'
+    labels:
+      - 'dependencies'
+
+# todo - is this needed, can just delete and not have labels?
+version-resolver:
+  major:
+    labels:
+      - 'major'
+  minor:
+    labels:
+      - 'minor'
+  patch:
+    labels:
+      - 'patch'
+  default: minor
+template: |
+  # Changes
+
+  $CHANGES

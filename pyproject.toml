@@ -1,0 +1,54 @@
+[build-system]
+# todo - check the latest version on this
+requires = ["setuptools>=67.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "raspimonitor"
+# Make sure this matches the description in GitHub, in the README.md and wherever applies
+description = "TODO"
+readme = "README.md"
+authors = [{ "name" = "w0rmr1d3r" }]
+license = { text = "MIT" }
+# todo
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+# todo Make sure this matches the keywords in GitHub
+keywords = []
+# todo - dynamic
+version = "0.0.1"
+# Minumum supported version
+# If supporting newer versions, update ->  CI and classifiers
+# If minimum supported version changes, update -> CI, coverage, lint, release and classifiers.
+requires-python = ">=3.9"
+
+# Always try to be compatible with these versions and above
+dependencies = [
+    "requests~=2.0"
+]
+
+[project.optional-dependencies]
+# Always try to be compatible with these versions and above
+# todo - search for latest versions and update project and template accordingly
+dev = [
+    "pip-tools>=6.12.0", # todo - change for uv
+    "ruff>=0.0.270", # todo - check cloner for config on this
+]
+
+[project.urls]
+"Homepage" = "https://github.com/w0rmr1d3r/raspimonitor"
+"Repository" = "https://github.com/w0rmr1d3r/raspimonitor"
+"Bug Tracker" = "https://github.com/w0rmr1d3r/raspimonitor/issues"
+"Documentation" = "https://github.com/w0rmr1d3r/raspimonitor"
+"Changelog" = "https://github.com/w0rmr1d3r/raspimonitor/releases"
+"Funding" = "https://github.com/sponsors/w0rmr1d3r"
+
+[tool.setuptools]
+packages = ["raspimonitor"]
