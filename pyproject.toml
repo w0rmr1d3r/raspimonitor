@@ -18,7 +18,8 @@ classifiers = [
     "Intended Audience :: System Administrators",
     "License :: OSI Approved :: MIT License",
 ]
-keywords = []
+# Make this keywords match the ones in GitHub
+keywords = ["raspberry", "raspberrypi", "pi", "monitor"]
 
 version = "0.0.1"
 # Minumum supported version
