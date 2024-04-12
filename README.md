@@ -17,7 +17,7 @@ pip3 install -r requirements.txt
 ### As Python script
 
 ```bash
-# python raspimonitor.py YOURHOOKHERE THRESHOLD_TEMP_IN_CELSIUS
+# python3 raspimonitor.py YOURHOOKHERE THRESHOLD_TEMP_IN_CELSIUS
 # Example
 python3 raspimonitor.py http://your.web.hook.here 45
 # Example temp as float:
@@ -26,7 +26,19 @@ python3 raspimonitor.py http://your.web.hook.here 45.6
 
 ### As cron job
 
-Add your cron job as an script from above.
+Add your cron job as a script from above.
+
+```bash
+# 1. Open cron file
+crontab -e
+# 2. Add a cron
+# Example - run every minute:
+* * * * * python3 /path/to/raspimonitor.py http://your.web.hook.here 45
+# Example - run every 5 minutes
+*/5 * * * * python3 /path/to/raspimonitor.py http://your.web.hook.here 45
+# 3. Reload cron service
+sudo service cron reload
+```
 
 Ref. https://superuser.com/questions/232144/how-to-stop-a-currently-running-cron-job
 
