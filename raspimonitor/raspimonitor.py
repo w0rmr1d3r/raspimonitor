@@ -8,7 +8,7 @@ class DiscordIntegration:
     def __init__(self, discord_webhook: str):
         self.headers = {"Content-Type": "application/json"}
         self.webhook = discord_webhook
-    
+
     def send_message_to_discord(self, temp: str):
         message = f"@here Raspberry is at {temp} degrees!!!"
         try:
