@@ -4,24 +4,20 @@ Monitoring and alerting for your RaspberryPi
 
 ## Installation
 
-### From git
-
 ```bash
-git clone https://github.com/w0rmr1d3r/raspimonitor.git
-cd raspimonitor
-pip3 install -r requirements.txt
+pip3 install raspimonitor
 ```
 
 ## Usage
 
-### As Python script
+### Direct usage
 
 ```bash
-# python3 raspimonitor.py YOURHOOKHERE THRESHOLD_TEMP_IN_CELSIUS
+# raspimonitor YOURHOOKHERE THRESHOLD_TEMP_IN_CELSIUS
 # Example
-python3 raspimonitor.py http://your.web.hook.here 45
+raspimonitor http://your.web.hook.here 45
 # Example temp as float:
-python3 raspimonitor.py http://your.web.hook.here 45.6
+raspimonitor http://your.web.hook.here 45.6
 ```
 
 ### As cron job
@@ -33,9 +29,9 @@ Add your cron job as a script from above.
 crontab -e
 # 2. Add a cron
 # Example - run every minute:
-* * * * * python3 /path/to/raspimonitor.py http://your.web.hook.here 45
+* * * * * raspimonitor http://your.web.hook.here 45
 # Example - run every 5 minutes
-*/5 * * * * python3 /path/to/raspimonitor.py http://your.web.hook.here 45
+*/5 * * * * raspimonitor http://your.web.hook.here 45
 # 3. Reload cron service
 sudo service cron reload
 ```

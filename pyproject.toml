@@ -46,6 +46,9 @@ dev = [
 "Changelog" = "https://github.com/w0rmr1d3r/raspimonitor/releases"
 "Funding" = "https://github.com/sponsors/w0rmr1d3r"
 
+[project.scripts]
+raspimonitor = "raspimonitor:main"
+
 [tool.setuptools]
 packages = ["raspimonitor"]
 

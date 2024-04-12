@@ -1,7 +1,7 @@
 import subprocess
+import sys
 
 import requests
-import sys
 
 
 class DiscordIntegration:
@@ -32,7 +32,7 @@ class CPUInfo:
         return temp
 
 
-if __name__ == '__main__':
+def main():
     print("starting")
     # We receive our input
     input_webhook = sys.argv[1]
