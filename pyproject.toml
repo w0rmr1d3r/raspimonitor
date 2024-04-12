@@ -13,9 +13,6 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
     "Intended Audience :: Developers",
     "Intended Audience :: Information Technology",
     "Intended Audience :: System Administrators",
@@ -27,7 +24,7 @@ version = "0.0.1"
 # Minumum supported version
 # If supporting newer versions, update ->  CI and classifiers
 # If minimum supported version changes, update -> CI, release and classifiers.
-requires-python = ">=3.9"
+requires-python = "~=3.9.0"
 
 dependencies = [
     "requests~=2.0"
@@ -36,6 +33,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "pip-tools~=7.0",
+    "pytest~=8.0",
     "ruff==0.3.1",
 ]
 
@@ -49,7 +47,6 @@ dev = [
 
 [tool.setuptools]
 packages = ["raspimonitor"]
-
 
 [tool.ruff]
 # Exclude a variety of commonly ignored directories.

@@ -12,18 +12,28 @@ charset-normalizer==3.3.2
     # via requests
 click==8.1.7
     # via pip-tools
-idna==3.6
+exceptiongroup==1.2.0
+    # via pytest
+idna==3.7
     # via requests
 importlib-metadata==7.0.2
     # via build
+iniconfig==2.0.0
+    # via pytest
 packaging==23.2
-    # via build
+    # via
+    #   build
+    #   pytest
 pip-tools==7.4.1
     # via raspimonitor (pyproject.toml)
+pluggy==1.4.0
+    # via pytest
 pyproject-hooks==1.0.0
     # via
     #   build
     #   pip-tools
+pytest==8.1.1
+    # via raspimonitor (pyproject.toml)
 requests==2.31.0
     # via raspimonitor (pyproject.toml)
 ruff==0.3.1
@@ -33,6 +43,7 @@ tomli==2.0.1
     #   build
     #   pip-tools
     #   pyproject-hooks
+    #   pytest
 urllib3==2.2.1
     # via requests
 wheel==0.42.0
