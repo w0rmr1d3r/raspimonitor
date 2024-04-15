@@ -1,8 +1,12 @@
 # raspimonitor
 
-Monitoring and alerting for your RaspberryPi
+Monitoring and alerting to your Discord server for your RaspberryPi
 
 ## Installation
+
+You will need to set up a Discord server and webhook, see
+how [here](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks).
+After that, proceed to install the package in your raspberry:
 
 ```bash
 pip3 install raspimonitor
@@ -20,9 +24,9 @@ raspimonitor http://your.web.hook.here 45
 raspimonitor http://your.web.hook.here 45.6
 ```
 
-### As cron job
+### As a cron job
 
-Add your cron job as a script from above.
+Add your cron job as a script from above:
 
 ```bash
 # 1. Open cron file
@@ -40,7 +44,7 @@ Ref. https://superuser.com/questions/232144/how-to-stop-a-currently-running-cron
 
 ## Contributing
 
-Pull requests are welcome.
+Pull requests and issues are welcome.
 
 ## License
 
