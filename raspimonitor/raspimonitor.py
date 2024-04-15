@@ -1,14 +1,14 @@
 import subprocess
+import sys
 
 import requests
-import sys
 
 
 class DiscordIntegration:
     def __init__(self, discord_webhook: str):
         self.headers = {"Content-Type": "application/json"}
         self.webhook = discord_webhook
-    
+
     def send_message_to_discord(self, temp: str):
         message = f"@here Raspberry is at {temp} degrees!!!"
         try:
@@ -32,7 +32,7 @@ class CPUInfo:
         return temp
 
 
-if __name__ == '__main__':
+def main():
     print("starting")
     # We receive our input
     input_webhook = sys.argv[1]

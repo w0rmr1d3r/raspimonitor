@@ -1,41 +1,41 @@
 # raspimonitor
 
-Monitoring and alerting for your RaspberryPi
+Monitoring and alerting to your Discord server for your RaspberryPi
 
 ## Installation
 
-### From git
+You will need to set up a Discord server and webhook, see
+how [here](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks).
+After that, proceed to install the package in your raspberry:
 
 ```bash
-git clone https://github.com/w0rmr1d3r/raspimonitor.git
-cd raspimonitor
-pip3 install -r requirements.txt
+pip3 install raspimonitor
 ```
 
 ## Usage
 
-### As Python script
+### Direct usage
 
 ```bash
-# python3 raspimonitor.py YOURHOOKHERE THRESHOLD_TEMP_IN_CELSIUS
+# raspimonitor YOURHOOKHERE THRESHOLD_TEMP_IN_CELSIUS
 # Example
-python3 raspimonitor.py http://your.web.hook.here 45
+raspimonitor http://your.web.hook.here 45
 # Example temp as float:
-python3 raspimonitor.py http://your.web.hook.here 45.6
+raspimonitor http://your.web.hook.here 45.6
 ```
 
-### As cron job
+### As a cron job
 
-Add your cron job as a script from above.
+Add your cron job as a script from above:
 
 ```bash
 # 1. Open cron file
 crontab -e
 # 2. Add a cron
 # Example - run every minute:
-* * * * * python3 /path/to/raspimonitor.py http://your.web.hook.here 45
+* * * * * raspimonitor http://your.web.hook.here 45
 # Example - run every 5 minutes
-*/5 * * * * python3 /path/to/raspimonitor.py http://your.web.hook.here 45
+*/5 * * * * raspimonitor http://your.web.hook.here 45
 # 3. Reload cron service
 sudo service cron reload
 ```
@@ -44,7 +44,7 @@ Ref. https://superuser.com/questions/232144/how-to-stop-a-currently-running-cron
 
 ## Contributing
 
-Pull requests are welcome.
+Pull requests and issues are welcome.
 
 ## License
 

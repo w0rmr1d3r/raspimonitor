@@ -1,0 +1,10 @@
+name-template: '$RESOLVED_VERSION'
+tag-template: '$RESOLVED_VERSION'
+categories:
+  - title: 'Dependencies'
+    labels:
+      - 'dependencies'
+template: |
+  # Changes
+
+  $CHANGES
