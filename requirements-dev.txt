@@ -26,7 +26,7 @@ packaging==24.0
     #   pytest
 pip-tools==7.4.1
     # via raspimonitor (pyproject.toml)
-pluggy==1.4.0
+pluggy==1.5.0
     # via pytest
 pyproject-hooks==1.0.0
     # via
