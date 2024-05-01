@@ -16,7 +16,7 @@ exceptiongroup==1.2.0
     # via pytest
 idna==3.7
     # via requests
-importlib-metadata==7.0.2
+importlib-metadata==7.1.0
     # via build
 iniconfig==2.0.0
     # via pytest
