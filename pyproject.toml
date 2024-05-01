@@ -21,7 +21,7 @@ classifiers = [
 # Make this keywords match the ones in GitHub
 keywords = ["raspberry", "raspberrypi", "pi", "monitor"]
 
-version = "0.0.1"
+version = "0.0.2"
 # Minumum supported version
 # If supporting newer versions, update ->  CI and classifiers
 # If minimum supported version changes, update -> CI, release and classifiers.
