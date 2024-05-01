@@ -9,7 +9,7 @@ how [here](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webh
 After that, proceed to install the package in your raspberry:
 
 ```bash
-pip3 install raspimonitor
+pip install raspimonitor
 ```
 
 ## Usage
@@ -19,9 +19,9 @@ pip3 install raspimonitor
 ```bash
 # raspimonitor YOURHOOKHERE THRESHOLD_TEMP_IN_CELSIUS
 # Example
-raspimonitor http://your.web.hook.here 45
+python -m raspimonitor http://your.web.hook.here 45
 # Example temp as float:
-raspimonitor http://your.web.hook.here 45.6
+python -m raspimonitor http://your.web.hook.here 45.6
 ```
 
 ### As a cron job
@@ -33,9 +33,9 @@ Add your cron job as a script from above:
 crontab -e
 # 2. Add a cron
 # Example - run every minute:
-* * * * * raspimonitor http://your.web.hook.here 45
+* * * * * python -m raspimonitor http://your.web.hook.here 45
 # Example - run every 5 minutes
-*/5 * * * * raspimonitor http://your.web.hook.here 45
+*/5 * * * * python -m raspimonitor http://your.web.hook.here 45
 # 3. Reload cron service
 sudo service cron reload
 ```
