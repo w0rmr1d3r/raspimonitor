@@ -44,7 +44,7 @@ tomli==2.0.1
     #   pip-tools
     #   pyproject-hooks
     #   pytest
-urllib3==2.2.1
+urllib3==2.2.2
     # via requests
 wheel==0.43.0
     # via pip-tools
