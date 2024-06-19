@@ -34,7 +34,7 @@ pyproject-hooks==1.1.0
     #   pip-tools
 pytest==8.2.0
     # via raspimonitor (pyproject.toml)
-requests==2.31.0
+requests==2.32.3
     # via raspimonitor (pyproject.toml)
 ruff==0.3.7
     # via raspimonitor (pyproject.toml)
