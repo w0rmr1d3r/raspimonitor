@@ -20,7 +20,7 @@ importlib-metadata==7.1.0
     # via build
 iniconfig==2.0.0
     # via pytest
-packaging==24.0
+packaging==24.1
     # via
     #   build
     #   pytest
