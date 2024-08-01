@@ -12,7 +12,7 @@ charset-normalizer==3.3.2
     # via requests
 click==8.1.7
     # via pip-tools
-exceptiongroup==1.2.1
+exceptiongroup==1.2.2
     # via pytest
 idna==3.7
     # via requests
