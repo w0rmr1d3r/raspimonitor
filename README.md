@@ -1,3 +1,9 @@
+# Note of archival
+
+Being moved to https://github.com/w0rmr1d3r/selfhosted
+
+---
+
 # raspimonitor
 
 Monitoring and alerting to your Discord server for your RaspberryPi
